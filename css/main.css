@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+section{
+    text-align: center;
+    margin-right: 25vw;
+    margin-left: 25vw;
+    background-color: #474747;
+    padding: 2% 0% 2% 0%;
+    margin-bottom: 3%;
+    line-height: 200%;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    background-color: blueviolet;
+    padding: 1.5%;
+    border-radius: 50px;
+}
