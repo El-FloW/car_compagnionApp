@@ -66,8 +66,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <label>Compteur kilométrique :</label>
     <input type="number" name="odometre" min="0" required>
 
-    <label>Date :</label>
-    <input type="date" name="date" required>
+    <label>Date et heure :</label>
+    <input type="datetime-local" name="date" value="<?= date('Y-m-d\TH:i') ?>" required>
 
     <button type="submit">Ajouter</button>
 </form>

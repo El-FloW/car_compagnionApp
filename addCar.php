@@ -9,13 +9,12 @@ if (!isset($_SESSION["user_id"])) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $car_name = trim($_POST["car_name"]);
-    $kilometrage = intval($_POST["kilometrage"]);
     $user_id = $_SESSION["user_id"];
 
     if (!empty($car_name) && $kilometrage >= 0) {
         // Insérer le véhicule dans la base de données
-        $stmt = $pdo->prepare("INSERT INTO ca_car (fk_user, car_name, kilometrage) VALUES (?, ?, ?)");
-        $stmt->execute([$user_id, $car_name, $kilometrage]);
+        $stmt = $pdo->prepare("INSERT INTO ca_car (fk_user, car_name) VALUES (?, ?)");
+        $stmt->execute([$user_id, $car_name]);
 
         echo "✅ Véhicule ajouté avec succès !";
     } else {
@@ -28,9 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <form method="post">
     <label>Nom du véhicule :</label>
     <input type="text" name="car_name" required>
-
-    <label>Kilométrage :</label>
-    <input type="number" name="kilometrage" min="0" required>
 
     <button type="submit">Ajouter</button>
 </form>
