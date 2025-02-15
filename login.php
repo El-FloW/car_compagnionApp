@@ -19,6 +19,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION["user_name"] = $user["name"];
                 $_SESSION["user_email"] = $email;
                 echo "✅ Connexion réussie, bienvenue " . $_SESSION["user_name"] . " !";
+                // Redirige l'utilisateur vers la page de connexion ou d'accueil
+                header("Location: index.php");
+                exit;
             } else {
                 echo "❌ Mot de passe incorrect.";
             }

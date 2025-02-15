@@ -47,9 +47,9 @@ section p {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
     section {
-        margin-right: 10vw;
-        margin-left: 10vw;
+        margin-right: 5vw;
+        margin-left: 5vw;
     }
 }

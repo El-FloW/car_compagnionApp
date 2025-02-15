@@ -9,7 +9,7 @@ h1,h2{
     font-style: normal;
 }
 
-p,a {
+p,a,button {
     font-family: "Inconsolata", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -24,6 +24,20 @@ a{
     padding: 1.5%;
     border-radius: 50px;
     
+}
+
+select {
+    font-family: "Inconsolata", serif;
+    font-size: 16px;
+    color: white;
+    background-color: blueviolet;
+    border: 0px solid rgba(255, 255, 255, 0);
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
 }
 
 @media screen and (min-width: 2000px) {
